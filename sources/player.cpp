@@ -58,6 +58,20 @@ namespace ariel {
     void Player::setName(string name) {
         _name = name;
     }
+    std::vector<Card> Player::getCards() {
+        return _cards;
+    }
+    void Player::addCard(Card card) {
+        _cards.push_back(card);
+    }
+    void Player::removeCard() {
+        _cards.pop_back();
+    }
+    Card Player::getTopCard() {
+        Card card = _cards.back();
+        _cards.pop_back();
+        return card;
+    }
 
 
 

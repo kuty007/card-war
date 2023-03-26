@@ -31,6 +31,15 @@ namespace ariel {
         void setIsPlaying(bool isPlaying);
         bool getIsPlaying();
         void setCards(std::vector<Card> cards);
+        std::vector<Card> getCards();
+        //add card to the player
+        void addCard(Card card);
+        //remove card from the player
+        void removeCard();
+        //get the top card from the player
+        Card getTopCard();
+        //get the card from the player
+
 
 
 
@@ -44,6 +53,7 @@ namespace ariel {
         int cardsWon;
         int numOfWins;
         std::vector <Card> _cards;
+
     };
 
 }

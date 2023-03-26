@@ -1,4 +1,4 @@
-#!/bin/bash
+./#!/bin/bash
 # Utilities for making grade-scripts shorter
 
 set -o pipefail   # see https://unix.stackexchange.com/a/267031/16569

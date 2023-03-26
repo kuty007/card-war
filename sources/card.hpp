@@ -36,6 +36,7 @@ namespace ariel {
         void set_value(Value value);
         void set_suit(Suit suit);
         int compare(Card card);
+
     private:
         Value _value;
         Suit _suit;
