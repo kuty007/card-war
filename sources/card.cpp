@@ -3,6 +3,7 @@
 //
 
 #include "card.hpp"
+#include <string>
 
 namespace ariel {
 //implement the card class
@@ -16,12 +17,12 @@ namespace ariel {
     }
 
     void ariel::Card::set_suit(Suit suit) {
-        _suit = suit;
+
     }
 
     void ariel::Card::set_value(Value value) {
-        _value = value;
     }
+
 
     Suit ariel::Card::get_suit() {
         return _suit;
@@ -32,13 +33,17 @@ namespace ariel {
     }
 
     int ariel::Card::compare(Card card) {
-        if (_value > card.get_value()) {
-            return 1;
-        } else if (_value < card.get_value()) {
-            return -1;
-        } else {
-            return 0;
-        }
+        return 0;
     }
+
+    //tosring
+    std::string ariel::Card::toString() {
+        return "";
+    }
+
+
 }
+
+
+
 // ariel

@@ -4,7 +4,7 @@
 #include <string>
 #include "card.hpp"
 #include <vector>
-
+#include <string>
 using namespace std;
 #ifndef CARDWAR_A_PLAYER_H
 #define CARDWAR_A_PLAYER_H
@@ -13,11 +13,8 @@ namespace ariel {
     class Player {
     public:
         Player();
-
         Player(string name);
-
         int stacksize();
-
         int cardesTaken();
         //getters and setters
         void setName(string name);
@@ -41,11 +38,6 @@ namespace ariel {
         //get the card from the player
 
 
-
-
-
-
-
     private:
         string _name;
         bool isPlaying;
@@ -53,7 +45,6 @@ namespace ariel {
         int cardsWon;
         int numOfWins;
         std::vector <Card> _cards;
-
     };
 
 }

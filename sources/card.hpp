@@ -1,7 +1,8 @@
 //
 // Created by asaf7 on 3/21/2023.
 //
-
+#include <string>
+using namespace std;
 #ifndef CARDWAR_A_CARD_H
 #define CARDWAR_A_CARD_H
 enum Suit {
@@ -36,6 +37,8 @@ namespace ariel {
         void set_value(Value value);
         void set_suit(Suit suit);
         int compare(Card card);
+        //tosring
+        string toString();
 
     private:
         Value _value;

@@ -11,63 +11,70 @@ namespace ariel {
 
     Player::Player(string name) {
         _name = name;
-        isPlaying = false;
-        cardsLeft = 0;
-        cardsWon = 0;
-        numOfWins = 0;
-
+        this->isPlaying = false;
+        this->cardsLeft = 0;
+        this->cardsWon = 0;
+        this->numOfWins = 0;
+        this->_cards = std::vector<Card>();
     }
 
     int Player::stacksize() {
-        return _cards.size();
+        return 0;
     }
 
     int Player::cardesTaken() {
-        return cardsWon;
+        return 0;
     }
     int Player::getNumOfWins() {
-        return numOfWins;
+        return 0;
     }
     int Player::getCardsWon() {
-        return cardsWon;
+        return 0;
+
     }
     int Player::getCardsLeft() {
-        return cardsLeft;
+        return 0;
     }
     bool Player::getIsPlaying() {
-        return isPlaying;
+        return false;
+
     }
     string Player::getName() {
-        return _name;
+        return "";
+
     }
     void Player::setNumOfWins(int num) {
-        numOfWins = num;
+
     }
     void Player::setCardsWon(int num) {
-        cardsWon = num;
+
     }
     void Player::setCardsLeft(int num) {
-        cardsLeft = num;
+
     }
     void Player::setIsPlaying(bool isPlaying) {
-        this->isPlaying = isPlaying;
+
     }
     void Player::setCards(std::vector<Card> cards) {
-        _cards = cards;
+
     }
     void Player::setName(string name) {
-        _name = name;
+
     }
     std::vector<Card> Player::getCards() {
-        return _cards;
+        return std::vector<Card>();
+
     }
     void Player::addCard(Card card) {
-        _cards.push_back(card);
+
     }
     void Player::removeCard() {
-        _cards.pop_back();
+
     }
     Card Player::getTopCard() {
+        if (_cards.size() == 0) {
+            throw "no cards left";
+        }
         Card card = _cards.back();
         _cards.pop_back();
         return card;
